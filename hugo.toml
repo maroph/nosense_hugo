@@ -1,0 +1,70 @@
+baseURL = 'https://maroph.github.io/nosense_hugo/'
+DefaultContentLanguage = "en"
+languageCode = 'en-us'
+title = 'NoSense'
+timeZone = "Europe/Berlin"
+publishDir = "docs"
+# Using theme as git submodule
+# git submodule add https://github.com/halogenica/beautifulhugo themes/beautifulhugo
+# https://raw.githubusercontent.com/halogenica/beautifulhugo/refs/heads/master/exampleSite/hugo.toml
+theme = 'beautifulhugo'
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+# enableGitInfo = false
+
+[params]
+  # homeTitle = "NoSense Home Page"
+  subtitle = "Some of my stupid thoughts"
+  # disclaimerText = "First Draft Only"
+  selfHosted = true
+  mainSections = ["posts"]
+  favicon = "images/favicon_hugo-32x32.png"
+  logo = "images/great_wave_off_kanagawa_200x200.jpg"
+  # dateFormat = "January 2, 2006"
+  commit = false
+  # commit = "https://github.com/maroph/nosense_hugo/tree/main"
+  rss = true
+  comments = false
+  readingTime = false
+  wordCount = false
+  useHLJS = true
+  socialShare = false
+  hideAuthor = true
+  [params.author]
+    name = "maroph"
+    website = "https://maroph.github.io/"
+    # email = "marochess@yahoo.com"
+    github = "maroph"
+    mastodon = "https://mastodon.social/@maroph"
+    codepen = "https://codepen.io/maroph/"
+    # bluesky = "maroph.bsky.social"
+
+[menus]
+  # [[menu.main]]
+  #   name = "Blog"
+  #   url = ""
+  #   weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "pages/about/"
+    weight = 1
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+    respectDoNotTrack = true
+  [privacy.instagram]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.x]
+    disable = true
+  [privacy.youTube]
+    disable = true
+
