@@ -3,7 +3,7 @@ DefaultContentLanguage = "en"
 languageCode = 'en-us'
 title = 'NoSense'
 timeZone = "Europe/Berlin"
-publishDir = "docs"
+#####publishDir = "docs"
 # Using theme as git submodule
 # git submodule add https://github.com/halogenica/beautifulhugo themes/beautifulhugo
 # https://raw.githubusercontent.com/halogenica/beautifulhugo/refs/heads/master/exampleSite/hugo.toml
