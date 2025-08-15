@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NoSense</title>
+    <link>http://localhost:1313/nosense_hugo/</link>
+    <description>Recent content on NoSense</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Aug 2025 17:34:24 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/nosense_hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/nosense_hugo/pages/about/</link>
+      <pubDate>Sat, 09 Aug 2025 17:34:24 +0200</pubDate>
+      <guid>http://localhost:1313/nosense_hugo/pages/about/</guid>
+      <description>&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;&#xA;&lt;p&gt;The content of this site is licensed under a&#xA;&lt;a href=&#34;https://creativecommons.org/licenses/by/4.0/legalcode&#34;&gt;CC BY 4.0 - Creative Commons Attribution 4.0 International License&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Short summary of this license:&#xA;&lt;a href=&#34;https://creativecommons.org/licenses/by/4.0/deed&#34;&gt;CC BY 4.0 Deed&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://creativecommons.org/licenses/by/4.0/&#34;&gt;&lt;img src=&#34;../../images/cc-by_88x31.png&#34; alt=&#34;CC-BY 4.0&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
