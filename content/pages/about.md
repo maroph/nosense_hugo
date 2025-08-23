@@ -1,5 +1,6 @@
 +++
 date = '2025-08-09T17:34:24+02:00'
+draft = false
 title = 'About'
 +++
 
