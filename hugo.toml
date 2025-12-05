@@ -15,7 +15,8 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = 'linenos=inline'
-# enableGitInfo = false
+enableGitInfo = false
+# enableGitInfo = true
 
 [params]
   # homeTitle = 'NoSense Home Page'
@@ -27,7 +28,7 @@ pygmentsCodefencesGuessSyntax = true
   logo = 'images/great_wave_off_kanagawa_200x200.jpg'
   # dateFormat = 'January 2, 2006'
   commit = false
-  # commit = 'https://github.com/maroph/nosense_hugo/tree/main'
+  # commit = 'https://github.com/maroph/nosense_hugo/tree/'
   rss = true
   comments = false
   readingTime = false
@@ -95,8 +96,8 @@ pygmentsCodefencesGuessSyntax = true
     weight = 6
   [[menus.main]]
     parent = 'Bookmarks'
-    name = 'XAMPP'
-    url = 'https://www.apachefriends.org/'
+    name = 'Zensical'
+    url = 'https://zensical.org/'
     weight = 7
   [[menus.main]]
     name = 'Info'

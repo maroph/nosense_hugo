@@ -7,14 +7,14 @@
 # This work is licensed under a MIT License. #
 # https://choosealicense.com/licenses/mit/   #
 ##############################################
-COPYRIGHT="Copyright (C) 2025 Manfred Rosenboom"
-LICENSE="License: MIT <https://choosealicense.com/licenses/mit/>"
+declare -r COPYRIGHT="Copyright (C) 2025 Manfred Rosenboom"
+declare -r LICENSE="License: MIT <https://choosealicense.com/licenses/mit/>"
 #
 ###############################################################################
 #
 declare -r SCRIPT_NAME=$(basename $0)
 declare -r VERSION="0.1.0"
-declare -r VERSION_DATE="23-AUG-2025"
+declare -r VERSION_DATE="05-DEC-2025"
 declare -r VERSION_STRING="${SCRIPT_NAME}  ${VERSION}  (${VERSION_DATE})"
 #
 SCRIPT_DIR=$(dirname $0)
@@ -40,6 +40,7 @@ declare -r SCRIPT_DIR
 umask 0027
 #
 do_edit=1
+nodate=0
 is_page=0
 draft="false"
 #
@@ -49,7 +50,7 @@ print_usage() {
     cat <<EOT
 
 Usage: ${SCRIPT_NAME} [<options>] <filename>
-       Create a new Pelican item (post or page) file.
+       Create a new Hugo item (post or page) file.
 
     Options:
     -h|--help     : show this help text and exit
@@ -59,6 +60,8 @@ Usage: ${SCRIPT_NAME} [<options>] <filename>
     --list-posts  : TODO
     --list-static : TODO
     -n|--no-edit  : TODO
+    --no-date     : dont't add prefix YYYY/MM/ to file name for posts
+                    (posts only)
     -p|--page     : create a page (default: post)
     --draft       : set draft to true
 
@@ -108,6 +111,9 @@ do
         -n | --no-edit)
             do_edit=0
             ;;
+        --no-date)
+            nodate=1
+            ;;
         -p | --page)
             is_page=1
             ;;
@@ -145,7 +151,13 @@ if [ ${is_page} -eq 1 ]
 then
     file="content/pages/$1"
 else
-    file="content/posts/$1"
+    if  [ ${nodate} -eq 1 ]
+    then
+        file="content/posts/$1"
+    else
+        prefix=$(date +"%Y/%m")
+        file="content/posts/${prefix}/$1"
+    fi
 fi
 #
 ###############################################################################
@@ -183,6 +195,9 @@ fi
 #
 ###############################################################################
 #
+# echo "dir  : ${dir}"
+# echo "file : ${file}"
+# exit 42
 mkdir -p ${dir} || exit 1
 touch ${file} || exit 1
 #
@@ -208,6 +223,10 @@ echo "+++" > ${file}
 echo "date = '$(date +"%Y-%m-%dT%H:%M:%S%:z")'" >> ${file}
 echo "draft = ${draft}" >> ${file}
 echo "title = '${title}'" >> ${file}
+## echo "# categories = ['Uncategorized']" >> ${file}
+## echo "# categories = ['Category A', 'Category B']" >> ${file}
+# tags : 'til', 'zensical'
+echo "# tags = ['til', 'zensical']" >> ${file}
 echo "+++" >> ${file}
 #
 echo "" >> ${file}

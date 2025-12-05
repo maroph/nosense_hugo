@@ -69,9 +69,8 @@ Options:
 
   Working directory : ${SCRIPT_DIR}
 
-  Deployment is only availabe from within a Git repository and the
-  Python module ghp-import (https://pypi.org/project/ghp-import/)
-  must be installed.
+  Deployment is only availabe from within a Git repository and the installed
+  Python module ghp-import (https://pypi.org/project/ghp-import/).
 
 EOT
 }
@@ -170,7 +169,7 @@ fi
 if [ "$1" = "serve" ]
 then
     echo "${SCRIPT_NAME}: hugo server ..."
-    hugo server &
+    hugo server --disableFastRender &
     exit 0
 fi
 #
