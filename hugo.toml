@@ -23,7 +23,8 @@ enableGitInfo = false
   subtitle = 'Some of my stupid thoughts'
   # disclaimerText = 'First Draft Only'
   selfHosted = true
-  mainSections = ['posts']
+  mainSections = ['']
+  # mainSections = ['posts']
   favicon = 'images/favicon_hugo-32x32.png'
   logo = 'images/great_wave_off_kanagawa_200x200.jpg'
   # dateFormat = 'January 2, 2006'
@@ -52,14 +53,18 @@ enableGitInfo = false
   #   url = 'pages/page/'
   #   weight = 1
   [[menus.main]]
+    name = 'Blog'
+    url = '/posts/'
+    weight = 1
+  [[menus.main]]
     name = 'Notes'
     pageRef = 'pages/notes'
-    weight = 1
+    weight = 2
   [[menus.main]]
     parent = 'Notes'
     name = 'Note'
     url = 'pages/notes/note'
-    weight = 1
+    weight = 3
   [[menus.main]]
     name = 'Bookmarks'
     pageRef = 'pages/bookmarks'
