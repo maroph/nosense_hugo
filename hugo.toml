@@ -1,4 +1,4 @@
-# 24-AUG-2025
+# Last updated: 21-DEC-2025
 baseURL = 'https://maroph.github.io/nosense_hugo/'
 DefaultContentLanguage = 'en'
 languageCode = 'en-us'
@@ -23,10 +23,11 @@ enableGitInfo = false
   subtitle = 'Some of my stupid thoughts'
   # disclaimerText = 'First Draft Only'
   selfHosted = true
-  mainSections = ['']
-  # mainSections = ['posts']
   favicon = 'images/favicon_hugo-32x32.png'
   logo = 'images/great_wave_off_kanagawa_200x200.jpg'
+  since = 2025
+  mainSections = ['']
+  # mainSections = ['posts']
   # dateFormat = 'January 2, 2006'
   commit = false
   # commit = 'https://github.com/maroph/nosense_hugo/tree/'
