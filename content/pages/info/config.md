@@ -1,5 +1,5 @@
 +++
-date = '2025-11-29T15:56:00+01:00'
+date = '2026-01-08T15:43:00+01:00'
 draft = false
 title = 'Config'
 +++
@@ -127,6 +127,11 @@ Content:
 body {
   background: #fcfcfc;
 }
+
+a:link, a:visited, a:hover {
+  text-decoration: underline;
+}
+
 .pages-heading, .posts-heading {
   text-align: center;
 }
