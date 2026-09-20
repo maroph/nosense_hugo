@@ -1,5 +1,5 @@
 +++
-date = '2025-12-21T11:33:00+01:00'
+date = '2026-09-20T16:46:00+02:00'
 draft = true
 title = 'Hugo Site Configuration'
 tags = ['hugo']
@@ -35,6 +35,13 @@ $ echo "theme = 'beautifulhugo'" >> hugo.toml
 ### Clone the Repository
 ```
 $ git clone --recurse-submodules https://github.com/maroph/nosense.git
+```
+
+### Fetch/Pull the Repository
+```
+$ git fetch --all --recurse-submodules=yes
+
+$ git pull --recurse-submodules
 ```
 
 ### Status/Update of the theme

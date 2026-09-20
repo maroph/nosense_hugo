@@ -7,12 +7,12 @@
 # This work is licensed under a CC-BY 4.0 License. #
 # https://creativecommons.org/licenses/by/4.0/     #
 ####################################################
-COPYRIGHT="Copyright (C) 2025 Manfred Rosenboom."
-LICENSE="License: CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/>"
+declare -r COPYRIGHT="Copyright (C) 2025 Manfred Rosenboom."
+declare -r LICENSE="License: CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/>"
 #
 declare -r SCRIPT_NAME=$(basename $0)
 declare -r VERSION="0.1.0"
-declare -r VERSION_DATE="23-AUG-2025"
+declare -r VERSION_DATE="19-DEC-2025"
 declare -r VERSION_STRING="${SCRIPT_NAME}  ${VERSION}  (${VERSION_DATE})"
 #
 ###############################################################################
@@ -43,9 +43,9 @@ else
 fi
 #
 GHP_IMPORT=""
-if [ -x ~/bin/ghp-import.bash ]
+if [ -x $HOME/bin/ghp-import.bash ]
 then
-    GHP_IMPORT="~/bin/ghp-import.bash"
+    GHP_IMPORT="$HOME/bin/ghp-import.bash"
 fi
 #
 ###############################################################################
@@ -63,9 +63,9 @@ Options:
   Arguments
   build         : create the site data (default)
                   Location: public
+  deploy        : create the site and push all data to branch gh-pages
   serve         : create the site and run the Hugo development web server
   shut          : shutdown Hugo development web server
-  deploy        : create the site and push all data to branch gh-pages
 
   Working directory : ${SCRIPT_DIR}
 
@@ -154,8 +154,11 @@ then
         GHP_IMPORT="ghp-import"
     fi
 #
-    echo "${SCRIPT_NAME}: hugo build "
-    hugo build || exit 1
+    echo "${SCRIPT_NAME}: rm -fr ./public"
+    rm -fr ./public
+#
+    echo "${SCRIPT_NAME}: hugo build --gc --minify"
+    hugo build --gc --minify || exit 1
     echo ""
 #
     echo "${SCRIPT_NAME}: ghp-import --no-jekyll --push --no-history ./public"
@@ -168,15 +171,18 @@ fi
 #
 if [ "$1" = "serve" ]
 then
-    echo "${SCRIPT_NAME}: hugo server ..."
+    echo "${SCRIPT_NAME}: hugo server --disableFastRender ..."
     hugo server --disableFastRender &
     exit 0
 fi
 #
 ###############################################################################
 #
-echo "${SCRIPT_NAME}: hugo build"
-hugo build || exit 1
+echo "${SCRIPT_NAME}: rm -fr ./public"
+rm -fr ./public
+#
+echo "${SCRIPT_NAME}: hugo build --gc --minify"
+hugo build --gc --minify || exit 1
 echo ""
 #
 if [ ${gitrepo} -eq 1 ]

@@ -128,7 +128,7 @@ body {
   background: #fcfcfc;
 }
 
-a:link, a:visited, a:hover {
+.post-entry a:link, .post-entry a:visited, .post-entry a:hover {
   text-decoration: underline;
 }
 
