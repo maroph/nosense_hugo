@@ -1,7 +1,7 @@
-# Last updated: 21-DEC-2025
+# Last updated: 29-SEP-2026
 baseURL = 'https://maroph.github.io/nosense_hugo/'
-DefaultContentLanguage = 'en'
-languageCode = 'en-us'
+defaultContentLanguage = 'en'
+locale = 'en-us'
 title = 'NoSense'
 timeZone = 'Europe/Berlin'
 #####publishDir = 'docs'
